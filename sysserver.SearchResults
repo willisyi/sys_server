@@ -1,0 +1,9 @@
+---- ApproDrvInit Matches (8 in 5 files) ----
+ApproDrvMsg.c (e:\南邮——研究生\刘门研究生论文\陈敏洁毕业上交资料\代码及文档\interface\src):int ApproDrvInit(int proc_id)
+ApproDrvMsg.h (e:\南邮——研究生\刘门研究生论文\陈敏洁毕业上交资料\代码及文档\interface\inc):/* Only one ApproDrvInit is allowed in each process */
+ApproDrvMsg.h (e:\南邮——研究生\刘门研究生论文\陈敏洁毕业上交资料\代码及文档\interface\inc):int ApproDrvInit(int proc_id);
+Appro_interface.c (e:\南邮——研究生\刘门研究生论文\陈敏洁毕业上交资料\代码及文档\interface\src): * @pre Must have called ApproDrvInit() and func_get_mem()
+Appro_interface.h (e:\南邮——研究生\刘门研究生论文\陈敏洁毕业上交资料\代码及文档\interface\inc):		if(ApproDrvInit(Msg_id))
+Appro_interface.h (e:\南邮——研究生\刘门研究生论文\陈敏洁毕业上交资料\代码及文档\interface\inc):		if(ApproDrvInit(Msg_id))
+Av_server_ctrl.c (src):	if(ApproDrvInit(SYS_MSG_TYPE)){
+Av_server_ctrl.c (src):		__E("ApproDrvInit fail\n");
