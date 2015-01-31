@@ -843,7 +843,7 @@ int StartStream(StreamEnv_t* pConfig)
 	printf(cmd);
 	//system(cmd);//[guo]
 	//added by [guo]
-	system("./dvr_rdk_demo_link_api.out 1080P60 RTSP H264 6000 CBR HIGH AUDIO 8000 G711 uLaw OSD_ON font16 50 204 &\n");
+	//system("./dvr_rdk_demo_link_api.out 1080P60 RTSP H264 6000 CBR HIGH AUDIO 8000 G711 uLaw OSD_ON font16 50 204 &\n");
 
 	return 0;
 }

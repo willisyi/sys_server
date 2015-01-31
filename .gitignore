@@ -1,1 +1,12 @@
 *.o
+*.PR
+*.PRI
+*.PS
+*.SearchResults
+*.WK3
+*.PFI
+*.PO
+*.IAB
+*.IAD
+*.IMB
+*.IMD
