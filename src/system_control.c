@@ -791,7 +791,7 @@ int SystemInit()
 	}
 
 	changeTimeZone();
-//	InitAV_Server(&tConfig);//commented by [guo]
+	InitAV_Server(&tConfig);//commented by [guo]
     //RTSP_AudioRecvON();
 
 	SetReloadFlag(0); //Send message to GUI that restart is Over
