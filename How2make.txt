@@ -1,0 +1,26 @@
+pls put sys_server (system_server's source code)dir
+8168_Boa dir,Interface dir
+and LiveServer（wis-streamer's source code）dir,
+in the dir where dvr_rdk is.
+
+当编译sys_server时会提是freetype相关的问题。解决方法如下：
+
+
+交叉编译freetype
+在编译boa的时候，会报如下错误，因为系统缺少freetype库文件。
+DVRRDK_03.00.00.00/ti_tools/cgt_a8/arm-2009q1/bin/../lib/gcc/arm-none-linux-gnueabi/4.3.3/../../../../arm-none-linux-gnueabi/bin/ld:     cannot find -lfreetype
+编译步骤如下：
+a）在http://download.savannah.gnu.org/releases/freetype/下载freetype-2.4.0.tar.gz
+b）解压源码：
+    $ tar -zxvf freetype-2.4.0.tar.gz
+c）对源码进行交叉编译配置
+    $ cd freetype-2.4.0
+    $./configure CC=arm-none-linux-gnueabi-gcc --host=arm-linux --prefix=$PWD/install
+d）编译生成库文件：
+    $ make && make install
+e）将生成的库拷贝的交叉编译工具的库目录下：
+i：将生成的install/lib 下的libfreetype.so libfreetype.so.6 libfreetype.so.6.5.0拷贝至...//arm-2009q1/arm-none-linux-gnueabi/libc/lib
+注：目标目录前的省略号为具体环境下的具体目录，如本环境中为：DVRRDK_03.00.00.00/ti_tools/cgt_a8/，请根据情况进行具体修改。
+ii：将生成的install/lib下的libfreetype.a libfreetype.la libfreetype.so libfreetype.so.6 libfreetype.so.6.5.0拷贝至
+DVRRDK_03.00.00.00/ti_tools/cgt_a8/arm-2009q1/arm-none-linux-gnueabi/libc/usr/lib
+iii：将生成的目录/install/include目录下的所有文件拷贝至：DVRRDK_03.00.00.00/ti_tools/cgt_a8/arm-2009q1/arm-none-linux-gnueabi/libc/usr/include
